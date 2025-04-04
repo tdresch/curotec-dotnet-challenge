@@ -11,6 +11,7 @@ namespace Curotec.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // Uncomment the following line to use SQL Server for migration purposes
             // optionsBuilder.UseSqlServer("AZURE_CONNECTION_STRING");
         }
 
@@ -31,7 +32,7 @@ namespace Curotec.Data
             modelBuilder.Entity<Product>()
                 .Property(p => p.CreatedAt)
                 .IsRequired()
-                .HasColumnType("datetime")
+                .HasColumnType("datetime2")
                 .HasDefaultValueSql("GETDATE()");
 
             base.OnModelCreating(modelBuilder);
