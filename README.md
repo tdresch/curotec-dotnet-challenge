@@ -45,11 +45,11 @@ cd your-repo
 
 2. **Update SQL Server connection string**
 
-In `appsettings.json`, update the `DefaultConnection`:
+In `appsettings.json`, update the `AZURE_SQL_CONNECTIONSTRING`:
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=YOUR_SERVER;Database=ProductDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  "AZURE_SQL_CONNECTIONSTRING": "Server=YOUR_SERVER;Database=ProductDb;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
 ```
 
