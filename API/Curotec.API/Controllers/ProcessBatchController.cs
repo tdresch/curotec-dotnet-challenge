@@ -22,10 +22,10 @@ namespace Curotec.API.Controllers
         [SwaggerOperation(
                     Summary = "Insert a list of products according to the batch size",
                     Description = "Insert a list of products according to the batch size",
-                    Tags = new[] { "Insert" },
+                    Tags = new[] { "Batch" },
                     OperationId = "insert"
                     )]
-        [SwaggerResponse(201, "Insert a new product", typeof(ProductDto))]
+        [SwaggerResponse(201, "Insert a list of products", typeof(ProductDto))]
         [SwaggerResponse(400, "Returns an 400 error", typeof(ErrorResponse))]
         [SwaggerResponse(404, "Returns an 404 error", typeof(ErrorResponse))]
         [ValidateBatch]
